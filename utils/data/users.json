@@ -1,0 +1,14 @@
+[
+	{
+		"firstname": "andres",
+		"email": "andres@gmail.co",
+		"password": "$2a$08$8J0mVPO9JrSDhm0qSeO93ebYiNKZjpi0fhRH80ZepY.2FwlbfFss2",
+		"favorites": []
+	},
+	{
+		"firstname": "silvia",
+		"email": "silvia@gmail.co",
+		"password": "$2a$08$8J0mVPO9JrSDhm0qSeO93ebYiNKZjpi0fhRH80ZepY.2FwlbfFss2",
+		"favorites": []
+	}
+]
