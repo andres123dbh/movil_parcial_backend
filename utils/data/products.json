@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "rating": 3.9,
+    "seller": "Dasadi"
+  },
+  {
+    "id": 2,
+    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    "title": "Mens Casual Premium Slim Fit T-Shirts ",
+    "rating": 4.1,
+    "seller": "Keni"
+  },
+  {
+    "id": 3,
+    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+    "title": "Mens Cotton Jacket",
+    "rating": 4.7,
+    "seller": "Dasadi"
+  },
+  {
+    "id": 4,
+    "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+    "title": "Mens Casual Slim Fit",
+    "rating": 2.1,
+    "seller": "Dasadi"
+  },
+  {
+    "id": 5,
+    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    "title": "John Hardy Women's Legends Naga Gold \u0026 Silver Dragon Station Chain Bracelet",
+    "rating": 4.6,
+    "seller": "Fannysti"
+  },
+  {
+    "id": 6,
+    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    "title": "Solid Gold Petite Micropave ",
+    "rating": 3.9,
+    "seller": "Fannysti"
+  },
+  {
+    "id": 7,
+    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    "title": "White Gold Plated Princess",
+    "rating": 3,
+    "seller": "Fannysti"
+  },
+  {
+    "id": 8,
+    "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+    "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+    "rating": 1.9,
+    "seller": "Fannysti"
+  },
+  {
+    "id": 9,
+    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+    "rating": 3.3,
+    "seller": "Lled"
+  },
+  {
+    "id": 10,
+    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+    "rating": 2.9,
+    "seller": "Lled"
+  },
+  {
+    "id": 11,
+    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+    "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+    "rating": 4.8,
+    "seller": "Lled"
+  },
+  {
+    "id": 12,
+    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+    "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+    "rating": 4.8,
+    "seller": "Sony"
+  },
+  {
+    "id": 13,
+    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+    "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+    "rating": 2.9,
+    "seller": "Acer"
+  },
+  {
+    "id": 14,
+    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+    "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+    "rating": 2.2,
+    "seller": "Samsung"
+  },
+  {
+    "id": 15,
+    "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+    "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+    "rating": 2.6,
+    "seller": "BIYLACLESEN"
+  },
+  {
+    "id": 16,
+    "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+    "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+    "rating": 2.9,
+    "seller": "BIYLACLESEN"
+  },
+  {
+    "id": 17,
+    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+    "rating": 3.8,
+    "seller": "BIYLACLESEN"
+  },
+  {
+    "id": 18,
+    "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+    "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+    "rating": 4.7,
+    "seller": "BIYLACLESEN"
+  },
+  {
+    "id": 19,
+    "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+    "title": "Opna Women's Short Sleeve Moisture",
+    "rating": 4.5,
+    "seller": "BIYLACLESEN"
+  },
+  {
+    "id": 20,
+    "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+    "rating": 3.6,
+    "seller": "BIYLACLESEN"
+  }
+]
