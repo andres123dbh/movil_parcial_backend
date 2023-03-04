@@ -9,4 +9,7 @@ import (
 func SetupRoutes(engine *gin.Engine) {
 	// Test
 	engine.GET("/test", middlewares.CheckMongoConnection(), controllers.Test)
+
+	//Session
+	engine.POST("/login", middlewares.CheckMongoConnection(), controllers.Login)
 }

@@ -11,3 +11,8 @@ type User struct {
 	Password  string               `json:"password"  bson:"password"`
 	Favorites []primitive.ObjectID `json:"favorites" bson:"favorites"`
 }
+
+type LoginForm struct {
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
