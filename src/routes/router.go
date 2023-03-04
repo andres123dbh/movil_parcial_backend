@@ -13,4 +13,7 @@ func SetupRoutes(engine *gin.Engine) {
 
 	//Session
 	engine.POST("/login", middlewares.CheckMongoConnection(), controllers.Login)
+
+	//Products
+	engine.GET("/products/get", middlewares.ProvideAccessToken(), middlewares.CheckMongoConnection(), controllers.GetProducts)
 }
