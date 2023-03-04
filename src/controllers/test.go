@@ -28,3 +28,14 @@ func Test(c *gin.Context) {
 		"message": user})
 
 }
+
+func Token(c *gin.Context) {
+
+	userid, _ := c.Get("userId")
+
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"message": "Successfully retrieved user",
+		"user":    userid,
+	})
+
+}

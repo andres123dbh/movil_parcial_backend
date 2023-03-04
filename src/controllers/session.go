@@ -9,6 +9,7 @@ import (
 
 	"github.com/andres123dbh/movil_parcial_backend/configuration"
 	"github.com/andres123dbh/movil_parcial_backend/interfaces"
+	"github.com/andres123dbh/movil_parcial_backend/utils"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -65,5 +66,9 @@ func Login(c *gin.Context) {
 		return
 	}
 
-	c.IndentedJSON(http.StatusOK, gin.H{"message": "Successfully logged in"})
+	accessToken, err := utils.CreateAccessToken(user.Id.Hex())
+
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"message":     "Successfully logged in",
+		"accessToken": accessToken})
 }
