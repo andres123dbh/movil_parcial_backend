@@ -16,3 +16,12 @@ type LoginForm struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
 }
+
+type Product struct {
+	Id     primitive.ObjectID `json:"_id,omitempty"       bson:"_id"`
+	ID     int                `json:"id" bson:"id"`
+	Image  string             `json:"image" bson:"image" `
+	Title  string             `json:"title" bson:"title" `
+	Rating float64            `json:"rating" bson:"rating"`
+	Seller string             `json:"seller" bson:"seller"`
+}
