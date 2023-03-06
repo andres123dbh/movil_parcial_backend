@@ -39,9 +39,6 @@ func UpdateFavorites(c *gin.Context) {
 	filter := bson.D{{"_id", id}}
 	update := bson.D{{"$set", bson.D{{"favorites", fav}}}}
 	result, err := coll.UpdateOne(context.TODO(), filter, update)
-	if err != nil {
-		panic(err)
-	}
 
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal server error"})
@@ -49,5 +46,40 @@ func UpdateFavorites(c *gin.Context) {
 	}
 	// returns # of changes
 	c.IndentedJSON(http.StatusOK, gin.H{"message": result})
+
+}
+
+func ObtainFavorites(c *gin.Context) {
+
+	var mc *mongo.Client = configuration.MongoGetClient()
+	coll := mc.Database("movil_parcial").Collection("users")
+	userid, _ := c.Get("userId")
+	id, _ := primitive.ObjectIDFromHex(userid.(string))
+	filter := bson.D{{"_id", id}}
+
+	var user interfaces.User
+	err := coll.FindOne(context.TODO(), filter).Decode(&user)
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal server error"})
+		return
+	}
+
+	collProducts := mc.Database("movil_parcial").Collection("products")
+
+	var userFavorites = user.Favorites
+	var temp []interfaces.Product
+	var product interfaces.Product
+	for _, favId := range userFavorites {
+		filter := bson.D{{"_id", favId}}
+		err := collProducts.FindOne(context.TODO(), filter).Decode(&product)
+		if err != nil {
+			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal server error"})
+			return
+		}
+		temp = append(temp, product)
+	}
+
+	c.IndentedJSON(http.StatusOK, gin.H{"error": err,
+		"products": temp})
 
 }
