@@ -13,7 +13,7 @@ func CreateAccessToken(userID string) (string, error) {
 	accessToken := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"userid":    userID,
 		"notBefore": time.Now(),
-		"expire":    time.Now().Add(time.Minute * 30),
+		"expire":    time.Now().Add(time.Hour * 168),
 	})
 
 	var err error

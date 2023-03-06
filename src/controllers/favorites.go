@@ -36,8 +36,8 @@ func UpdateFavorites(c *gin.Context) {
 
 	// updating favorites
 	id, _ := primitive.ObjectIDFromHex(userid.(string))
-	filter := bson.D{{"_id", id}}
-	update := bson.D{{"$set", bson.D{{"favorites", fav}}}}
+	filter := bson.D{{Key: "_id", Value: id}}
+	update := bson.D{{Key: "$set", Value: bson.D{{Key: "favorites", Value: fav}}}}
 	result, err := coll.UpdateOne(context.TODO(), filter, update)
 
 	if err != nil {
@@ -55,7 +55,7 @@ func ObtainFavorites(c *gin.Context) {
 	coll := mc.Database("movil_parcial").Collection("users")
 	userid, _ := c.Get("userId")
 	id, _ := primitive.ObjectIDFromHex(userid.(string))
-	filter := bson.D{{"_id", id}}
+	filter := bson.D{{Key: "_id", Value: id}}
 
 	var user interfaces.User
 	err := coll.FindOne(context.TODO(), filter).Decode(&user)
@@ -70,7 +70,7 @@ func ObtainFavorites(c *gin.Context) {
 	var temp []interfaces.Product
 	var product interfaces.Product
 	for _, favId := range userFavorites {
-		filter := bson.D{{"_id", favId}}
+		filter := bson.D{{Key: "_id", Value: favId}}
 		err := collProducts.FindOne(context.TODO(), filter).Decode(&product)
 		if err != nil {
 			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"message": "Internal server error"})
