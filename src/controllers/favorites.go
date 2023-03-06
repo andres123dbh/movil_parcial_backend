@@ -2,9 +2,7 @@ package controllers
 
 import (
 	"context"
-	"fmt"
 	"net/http"
-	"reflect"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"
@@ -21,8 +19,6 @@ func UpdateFavorites(c *gin.Context) {
 	coll := mc.Database("movil_parcial").Collection("users")
 	userid, _ := c.Get("userId")
 
-	fmt.Println("var1 = ", reflect.TypeOf(userid))
-
 	bodyFavs := interfaces.BodyFavorites{}
 
 	if err := c.BindJSON(&bodyFavs); err != nil {
@@ -33,9 +29,9 @@ func UpdateFavorites(c *gin.Context) {
 	// organizing an array of ObjectIDs
 	var user interfaces.User
 	fav := user.Favorites
-	for _, b := range bodyFavs.BodyFavorites {
-		fmt.Println(b)
-		fav = append(fav, b.Id)
+	for _, favId := range bodyFavs.BodyFavorites {
+		object_id, _ := primitive.ObjectIDFromHex(favId.ID)
+		fav = append(fav, object_id)
 	}
 
 	// updating favorites
