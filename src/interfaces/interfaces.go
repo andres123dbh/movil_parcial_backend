@@ -17,11 +17,20 @@ type LoginForm struct {
 	Password string `json:"password"`
 }
 
+// todo delete id string, is just for dev purposes
 type Product struct {
 	Id     primitive.ObjectID `json:"_id,omitempty"       bson:"_id"`
-	ID     int                `json:"id" bson:"id"`
-	Image  string             `json:"image" bson:"image" `
+	ID     string             `json:"id" bson:"id"`
 	Title  string             `json:"title" bson:"title" `
-	Rating float64            `json:"rating" bson:"rating"`
 	Seller string             `json:"seller" bson:"seller"`
+	Rating float64            `json:"rating" bson:"rating"`
+	Image  string             `json:"image" bson:"image" `
+}
+
+type BodyFavorites struct {
+	BodyFavorites []Product `json:"favorites"`
+}
+
+type Favorites struct {
+	Favorites primitive.ObjectID `json:"favorites" bson:"favorites"`
 }

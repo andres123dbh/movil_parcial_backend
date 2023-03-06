@@ -16,4 +16,9 @@ func SetupRoutes(engine *gin.Engine) {
 
 	//Products
 	engine.GET("/products/get", middlewares.ProvideAccessToken(), middlewares.CheckMongoConnection(), controllers.GetProducts)
+
+	//User
+	engine.POST("/user/favorites", middlewares.ProvideAccessToken(), middlewares.CheckMongoConnection(), controllers.UpdateFavorites)
+	engine.GET("/user/favorites", middlewares.ProvideAccessToken(), middlewares.CheckMongoConnection(), controllers.ObtainFavorites)
+
 }
